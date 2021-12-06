@@ -7,5 +7,6 @@ app.use(bodyParser.json());
 const allRouters = require('../routers/index');
 
 app.use('/users', allRouters.userRouter);
+app.use('/login', allRouters.loginRouter);
 
 module.exports = app;
