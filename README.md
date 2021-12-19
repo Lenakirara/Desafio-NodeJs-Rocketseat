@@ -112,6 +112,6 @@ O banco terá duas coleções: usuários e resumo de estudo
 - Cadastro e login de usuários
 - Cadastro de resumo de estudos
 
-3 - Fazer uma aplicação front-end para melhor vizualização.
+3 - Fazer uma aplicação front-end para melhor visualização.
 
 4 - Deploy
