@@ -1,6 +1,10 @@
 const router = require('express').Router();
 
 const {
+  validateSummaries,
+} = require('../middlewares/studySummaryValidation');
+
+const {
   getAllSummaries,
   findSummaryById,
   createSummaries,
@@ -10,7 +14,7 @@ const {
 
 router.get('/:id', findSummaryById);
 router.get('/', getAllSummaries);
-router.post('/', createSummaries);
+router.post('/', validateSummaries, createSummaries);
 router.put('/:id', updateSummary);
 router.delete('/:id', deleteSummary);
 
