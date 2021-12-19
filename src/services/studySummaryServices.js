@@ -17,8 +17,14 @@ const createSummaries = async (summary) => {
   return summaries;
 };
 
+const updateSummary = async (id, summary) => {
+  const editSummary = await summaryModels.updateSummary(id, summary);
+  return editSummary;
+}
+
 module.exports = {
   createSummaries,
   findSummaryById,
   getAllSummaries,
+  updateSummary,
 };

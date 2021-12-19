@@ -25,8 +25,22 @@ const createSummaries = async (summary) => {
   }
 };
 
+const updateSummary = async (id, summary) => {
+  if (!ObjectId.isValid(id)) return null;
+  const db = await connection();
+  await db.collection('summaries').updateOne(
+    { _id: ObjectId(id) },
+    { $set: { ...summary }},
+  );
+  return  {
+    _id: id,
+    ...summary,
+  }
+};
+
 module.exports = {
   createSummaries,
   findSummaryById,
-  getAllSummaries
+  getAllSummaries,
+  updateSummary
 };

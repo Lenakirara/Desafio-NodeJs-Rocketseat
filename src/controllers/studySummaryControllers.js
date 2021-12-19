@@ -20,7 +20,7 @@ const findSummaryById = async (req, res) => {
   } catch (error) {
     return res.status(500).json({ message: 'Server Error' });
   }
-}
+};
 
 const createSummaries = async (req, res) => {
   const { title, subtitle, abstract } = req.body;
@@ -30,10 +30,25 @@ const createSummaries = async (req, res) => {
   } catch (error) {
     return res.status(500).json({ message: 'Server Error' });
   }
-}
+};
+
+const updateSummary = async (req, res) => {
+  const { id } = req.params;
+  const { title, subtitle, abstract } = req.body;
+  try {
+    const editSummary = await summaryServices.updateSummary(id, {title, subtitle, abstract});
+    if (!editSummary) {
+      return res.status(400).json({ message: 'Invalid entries.' });
+    }
+    return res.status(200).json(editSummary);
+  } catch (error) {
+    return res.status(500).json({ message: 'Server Error' });
+  }
+};
 
 module.exports = {
   createSummaries,
   findSummaryById,
   getAllSummaries,
+  updateSummary,
 };
