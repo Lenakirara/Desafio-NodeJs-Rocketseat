@@ -1,5 +1,10 @@
 const summaryModels = require('../models/studySummaryModels');
 
+const getAllSummaries = async () => {
+  const getSummaries = await summaryModels.getAllSummaries();
+  return getSummaries;
+}
+
 const createSummaries = async (summary) => {
   const summaries = await summaryModels.createSummaries(summary);
   return summaries;
@@ -7,4 +12,5 @@ const createSummaries = async (summary) => {
 
 module.exports = {
   createSummaries,
+  getAllSummaries,
 };
