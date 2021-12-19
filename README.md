@@ -8,7 +8,7 @@ O projeto baseia-se em vários desafios propostos durante o evento Do While - 20
 
 Dos desafios propostos escolhi o de Node.Js (Express).
 
-Nesse desafio temos que desenvolver uma aplicação com seguinte tema: "Pensando em construir o futuro, como você solucionaria os problemas de acesso à educação hoje, utilizando a tecnologia?". Veja mais informações sobre os desafios [aqui](https://efficient-sloth-d85.notion.site/Instru-es-dos-desafios-f2f2c5574cf640c59de425413f60c8eb)
+Nesse desafio temos que desenvolver uma aplicação com seguinte tema: "Pensando em construir o futuro, como você solucionaria os problemas de acesso à educação hoje, utilizando a tecnologia?". Veja mais informações sobre os desafios [aqui](https://efficient-sloth-d85.notion.site/Instru-es-dos-desafios-f2f2c5574cf640c59de425413f60c8eb) 💜
 
 Pensando nisso resolvi desenvolver uma aplicação em que usuario cadastrado poderá ter sua própria biblioteca de resumos de estudo. ou seja, o usuario poderá inserir nessa aplicação um título e subtítulo, bem como o resumo referente a esse estudo. E assim poder compartilhar com outras pessoas o que aprendeu.
 
