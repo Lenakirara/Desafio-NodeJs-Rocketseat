@@ -46,9 +46,20 @@ const updateSummary = async (req, res) => {
   }
 };
 
+const deleteSummary = async (req, res) => {
+  const { id } = req.params;
+  try {
+    const removeSummary = await summaryServices.deleteSummary(id);
+    return res.status(204).json(removeSummary);
+  } catch (error) {
+    return res.status(500).json({ message: 'Server Error' });
+  }
+}
+
 module.exports = {
   createSummaries,
   findSummaryById,
   getAllSummaries,
   updateSummary,
+  deleteSummary,
 };

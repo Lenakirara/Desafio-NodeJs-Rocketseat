@@ -38,9 +38,16 @@ const updateSummary = async (id, summary) => {
   }
 };
 
+const deleteSummary = async (id) => {
+  if (!ObjectId.isValid(id)) return null;
+  const db = await connection();
+  await db.collection('summaries').deleteOne({ _id: ObjectId(id) });
+};
+
 module.exports = {
   createSummaries,
   findSummaryById,
   getAllSummaries,
-  updateSummary
+  updateSummary,
+  deleteSummary,
 };

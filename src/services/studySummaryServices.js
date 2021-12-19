@@ -22,9 +22,15 @@ const updateSummary = async (id, summary) => {
   return editSummary;
 }
 
+const deleteSummary = async (id) => {
+  const removeSummary = await summaryModels.deleteSummary(id);
+  return removeSummary;
+};
+
 module.exports = {
   createSummaries,
   findSummaryById,
   getAllSummaries,
   updateSummary,
+  deleteSummary,
 };
